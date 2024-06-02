@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .banner {
+            background: url('assets/images/blog1.jpg') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .banner h1 {
+            font-size: 48px;
+        }
+
+        .gallery-heading {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 36px;
+            color: #333;
+        }
+
+        .container {
+            display: grid;
+            gap: 15px;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid-item {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .grid-item img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <h1>Gallery</h1>
+    </div>
+    <h2 class="gallery-heading">Our Collection</h2>
+    <div class="container">
+        <div class="grid-item"><img src="assets/images/about.png" alt="Image 1"></div>
+        <div class="grid-item"><img src="assets/images/about1.png" alt="Image 2"></div>
+        <div class="grid-item"><img src="assets/images/bed.png" alt="Image 3"></div>
+        <div class="grid-item"><img src="assets/images/photo6.png" alt="Image 4"></div>
+        <div class="grid-item"><img src="assets/images/photo3.png" alt="Image 5"></div>
+        <div class="grid-item"><img src="assets/images/photo4.png" alt="Image 6"></div>
+    </div>
+</body>
+</html>
